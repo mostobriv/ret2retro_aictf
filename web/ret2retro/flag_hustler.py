@@ -30,7 +30,7 @@ def encrypt(data):
         second_step = [chr(key[i] ^ first_step[i]) for i in range(5)]
         result.extend(second_step)
 
-    return base64.b64encode(''.join(result))
+    return base64.b64encode((''.join(result)).encode('latin'))
 
 def _get_norm(score):
     x_min = 0
