@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  ret2retro-web:
+    build: .
+    environment:
+        - RET2RETRO_ENV=production
+    ports:
+      - 80:80
+
+    
