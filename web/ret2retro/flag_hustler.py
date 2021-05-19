@@ -2,6 +2,7 @@ import random
 from PIL import Image, ImageDraw
 from io import BytesIO
 import os
+import base64
 
 flag = None
 with open('/flag.txt', 'rb') as f:
@@ -29,7 +30,7 @@ def encrypt(data):
         second_step = [chr(key[i] ^ first_step[i]) for i in range(5)]
         result.extend(second_step)
 
-    return ''.join(result)
+    return base64.b64encode(''.join(result))
 
 def _get_norm(score):
     x_min = 0
