@@ -64,7 +64,7 @@ def mix_data_to_img(img_bytes, data):
     w,h = img.size
     pix = img.load()
 
-    num = int.from_bytes(data.encode(), 'big')
+    num = int.from_bytes(data, 'big')
     cur_shift = 0
     bitsn = len(data) << 3
     end_is_reached = False
