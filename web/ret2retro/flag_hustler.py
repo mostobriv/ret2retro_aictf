@@ -22,8 +22,9 @@ def encrypt(data):
 
     result = list()
     perm1 = [1, 3, 0, 4, 2]
-    key = data[:5]
+    key = list(data[:5])
     random.shuffle(key)
+    key = bytes(key)
 
     for c in chunks(data, 5):
         first_step = [c[i] for i in perm1]
