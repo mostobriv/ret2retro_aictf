@@ -21,13 +21,12 @@ def encrypt(data):
 
     result = list()
     perm1 = [1, 3, 0, 4, 2]
-    perm2 = [0, 1, 2, 3, 4]
     key = data[:5]
-    random.shuffle(perm2)
+    random.shuffle(key)
 
     for c in chunks(data, 5):
         first_step = [c[i] for i in perm1]
-        second_step = [chr(key[perm2[i]] ^ first_step[i]) for i in range(5)]
+        second_step = [chr(key[i] ^ first_step[i]) for i in range(5)]
         result.extend(second_step)
 
     return ''.join(result)
