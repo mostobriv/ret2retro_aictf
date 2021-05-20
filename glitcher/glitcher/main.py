@@ -61,7 +61,7 @@ def add_pictured_frame(im):
     d.text(location1, text1, font=font, fill=text_color)
 
     text1 = "MOSCOW"
-    text2 = "MAY. 20-22 2021"
+    text2 = "MAY. 20-21 2021"
     font = ImageFont.truetype(SAMSON_FONT_PATH, size=font_size)
     text_size = font.getsize(text)
     location2 = (1.8*shift, im.size[1] - (up+0.8)*shift-text_size[1])
