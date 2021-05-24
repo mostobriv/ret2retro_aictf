@@ -5,7 +5,7 @@ import os
 import base64
 
 flag = None
-with open('/flag.txt', 'rb') as f:
+with open('/flag.txt', 'r') as f:
     flag = f.read().strip()
 
 os.unlink('/flag.txt')
